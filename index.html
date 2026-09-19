@@ -40,6 +40,7 @@
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--accent-color);
+            text-decoration: none;
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -64,7 +65,7 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 1rem;
             background: linear-gradient(to right, #38bdf8, #818cf8);
             -webkit-background-clip: text;
@@ -85,7 +86,7 @@
         }
 
         .btn {
-            padding: 0.8rem 1.8rem;
+            padding: 0.9rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
@@ -112,12 +113,19 @@
             background-color: rgba(255, 255, 255, 0.05);
         }
 
+        .section-title {
+            text-align: center;
+            margin: 4rem 0 2rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+        }
+
         .features {
             max-width: 1200px;
-            margin: 4rem auto;
+            margin: 0 auto;
             padding: 0 1rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -130,11 +138,38 @@
 
         .card h3 {
             color: var(--accent-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             font-size: 1.3rem;
         }
 
         .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .stats-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .stat-box {
+            background-color: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-box h2 {
+            font-size: 2.2rem;
+            color: var(--accent-color);
+        }
+
+        .stat-box p {
             color: var(--text-muted);
         }
 
@@ -144,7 +179,7 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            margin-top: 4rem;
+            margin-top: 5rem;
         }
 
         @media (max-width: 768px) {
@@ -156,35 +191,60 @@
 <body>
 
     <header>
-        <div class="logo">🐺 TulparOS</div>
+        <a href="index.html" class="logo">🐺 TulparOS</a>
         <nav>
             <a href="#ozellikler">Özellikler</a>
-            <a href="https://github.com/TulparOS/TulparOS/releases" target="_blank">İndir</a>
+            <a href="indir.html">İndir</a>
             <a href="https://github.com/TulparOS/TulparOS" target="_blank">GitHub</a>
         </nav>
     </header>
 
     <section class="hero">
         <h1>Debian Tabanlı, Özgür ve Hızlı Linux Deneyimi</h1>
-        <p>TulparOS; kararlılığını Debian'dan alan, hafifliği ve performansı ön planda tutan public domain Linux dağıtımıdır.</p>
+        <p>TulparOS; kararlılığını Debian'dan alan, hafifliği ve yüksek performansı ön planda tutan kamu malı (Public Domain) Linux dağıtımıdır.</p>
         <div class="cta-buttons">
-            <a href="https://github.com/TulparOS/TulparOS/releases" target="_blank" class="btn btn-primary">ISO İndir (v1.0.0)</a>
-            <a href="https://github.com/TulparOS/TulparOS" target="_blank" class="btn btn-secondary">Kaynak Kodları İncele</a>
+            <a href="indir.html" class="btn btn-primary">Sürüm Seç ve İndir</a>
+            <a href="#ozellikler" class="btn btn-secondary">Özellikleri Keşfet</a>
         </div>
     </section>
 
-    <section class="features" id="ozellikler">
+    <div class="stats-container">
+        <div class="stat-box">
+            <h2>Debian</h2>
+            <p>Güçlü Taban</p>
+        </div>
+        <div class="stat-box">
+            <h2>%100</h2>
+            <p>Özgür Yazılım</p>
+        </div>
+        <div class="stat-box">
+            <h2>Nala</h2>
+            <p>Hızlı Paket Yöneticisi</p>
+        </div>
+        <div class="stat-box">
+            <h2>0 Bloat</h2>
+            <p>Sadece Gerekli Araçlar</p>
+        </div>
+    </div>
+
+    <h2 class="section-title" id="ozellikler">Neden TulparOS?</h2>
+
+    <section class="features">
         <div class="card">
             <h3>Debian Kararlılığı</h3>
             <p>Gücünü Debian paket ekosisteminden alır. Güvenli, kararlı ve uzun ömürlü bir sistem deneyimi sunar.</p>
         </div>
         <div class="card">
-            <h3>Yüksek Performans</h3>
-            <p>Arka plandaki gereksiz servislerden arındırılmıştır. Eski ve yeni tüm donanımlarda maksimum verimle çalışır.</p>
+            <h3>Maksimum Performans</h3>
+            <p>Arka plandaki gereksiz servislerden arındırılmıştır. Eski ve yeni tüm donanımlarda yüksek verimle çalışır.</p>
+        </div>
+        <div class="card">
+            <h3>Gelişmiş Paket Deneyimi</h3>
+            <p>Standart APT paket yöneticisinin yanı sıra görsel ve hızlı terminal deneyimi sunan Nala entegrasyonu ile gelir.</p>
         </div>
         <div class="card">
             <h3>The Unlicense</h3>
-            <p>TulparOS'a özel yazılan tüm konfigürasyonlar ve betikler tamamen kamu malıdır (Public Domain). Kısıtlama yok!</p>
+            <p>TulparOS'a özel yazılan tüm konfigürasyonlar ve betikler tamamen kamu malıdır. Kısıtlama olmadan kullanın!</p>
         </div>
     </section>
 
