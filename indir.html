@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İndir — TulparOS</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-color);
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .release-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .release-card.latest {
+            border: 1px solid var(--accent-color);
+        }
+
+        .release-info h2 {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .release-info p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-download {
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-download:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🐺 TulparOS</a>
+        <nav>
+            <a href="index.html" style="color: var(--text-muted); text-decoration: none;">Ana Sayfa</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>TulparOS İndir</h1>
+        <p class="subtitle">İhtiyacınıza uygun sürümü seçin. Tıkladığınızda doğrudan ISO indirme işlemi başlayacaktır.</p>
+
+        <!-- v1.0.0 (En Son Sürüm) -->
+        <div class="release-card latest">
+            <div class="release-info">
+                <h2>TulparOS v1.0.0 <span class="tag">En Son Sürüm</span></h2>
+                <p>Debian tabanlı ilk kararlı sürüm. Nala paket yöneticisi ve optimize edilmiş sistem altyapısı içerir.</p>
+            </div>
+            <!-- Bu link tıklandığında doğrudan ISO dosyasını indirir -->
+            <a href="https://github.com/TulparOS/TulparOS/releases/download/v1.0.0/tulparos-v1.0.0-amd64.iso" class="btn-download">
+                ⬇️ Doğrudan İndir (64-bit ISO)
+            </a>
+        </div>
+
+        <!-- İleride Yeni Sürüm Çıkınca Buraya Ekleyebilirsin -->
+        <!--
+        <div class="release-card">
+            <div class="release-info">
+                <h2>TulparOS v0.9.0 (Beta)</h2>
+                <p>Test amaçlı eski sürüm.</p>
+            </div>
+            <a href="https://github.com/TulparOS/TulparOS/releases/download/v0.9.0/tulparos-v0.9.0-amd64.iso" class="btn-download">
+                ⬇️ Doğrudan İndir (64-bit ISO)
+            </a>
+        </div>
+        -->
+
+    </div>
+
+    <footer>
+        <p>© 2026 TulparOS Projesi. The Unlicense lisansı altında özgürce dağıtılmaktadır.</p>
+    </footer>
+
+</body>
+</html>
