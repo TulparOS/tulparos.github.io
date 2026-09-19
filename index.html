@@ -1,1 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TulparOS — Özgür, Hafif ve Kararlı Linux Dağıtımı</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 5rem 1rem 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🐺 TulparOS</div>
+        <nav>
+            <a href="#ozellikler">Özellikler</a>
+            <a href="https://github.com/TulparOS/TulparOS/releases" target="_blank">İndir</a>
+            <a href="https://github.com/TulparOS/TulparOS" target="_blank">GitHub</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Debian Tabanlı, Özgür ve Hızlı Linux Deneyimi</h1>
+        <p>TulparOS; kararlılığını Debian'dan alan, hafifliği ve performansı ön planda tutan public domain Linux dağıtımıdır.</p>
+        <div class="cta-buttons">
+            <a href="https://github.com/TulparOS/TulparOS/releases" target="_blank" class="btn btn-primary">ISO İndir (v1.0.0)</a>
+            <a href="https://github.com/TulparOS/TulparOS" target="_blank" class="btn btn-secondary">Kaynak Kodları İncele</a>
+        </div>
+    </section>
+
+    <section class="features" id="ozellikler">
+        <div class="card">
+            <h3>Debian Kararlılığı</h3>
+            <p>Gücünü Debian paket ekosisteminden alır. Güvenli, kararlı ve uzun ömürlü bir sistem deneyimi sunar.</p>
+        </div>
+        <div class="card">
+            <h3>Yüksek Performans</h3>
+            <p>Arka plandaki gereksiz servislerden arındırılmıştır. Eski ve yeni tüm donanımlarda maksimum verimle çalışır.</p>
+        </div>
+        <div class="card">
+            <h3>The Unlicense</h3>
+            <p>TulparOS'a özel yazılan tüm konfigürasyonlar ve betikler tamamen kamu malıdır (Public Domain). Kısıtlama yok!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 TulparOS Projesi. The Unlicense lisansı altında özgürce dağıtılmaktadır.</p>
+    </footer>
+
+</body>
+</html>
